@@ -9,7 +9,7 @@ steps:
   - '--only'
   - 'hosting'
   - '--token'
-  - ''
+  - '${_FIREBASE_TOKEN}'
   - '--project'
   - ''
   - '--non-interactive'
