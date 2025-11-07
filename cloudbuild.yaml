@@ -1,0 +1,20 @@
+steps:
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install']
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'build']
+- name: 'gcr.io/cloud-builders/firebase'
+  args:
+  - 'deploy'
+  - '--only'
+  - 'hosting'
+  - '--token'
+  - ''
+  - '--project'
+  - ''
+  - '--non-interactive'
+availableSecrets:
+  secretManager:
+  - versionName: projects//secrets/firebase-deploy-token/versions/latest
+    env: '_FIREBASE_TOKEN'
+timeout: '1600s'
