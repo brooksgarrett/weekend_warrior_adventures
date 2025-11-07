@@ -18,3 +18,5 @@ availableSecrets:
   - versionName: projects//secrets/firebase-deploy-token/versions/latest
     env: '_FIREBASE_TOKEN'
 timeout: '1600s'
+options:
+  logging: 'CLOUD_LOGGING_ONLY'
