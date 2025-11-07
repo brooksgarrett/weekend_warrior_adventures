@@ -9,13 +9,13 @@ steps:
   - '--only'
   - 'hosting'
   - '--token'
-  - '${_FIREBASE_TOKEN}'
+  - '$(_FIREBASE_TOKEN)'
   - '--project'
   - ''
   - '--non-interactive'
 availableSecrets:
   secretManager:
-  - versionName: projects//secrets/firebase-deploy-token/versions/latest
+  - versionName: projects/teneight-sites-01/secrets/firebase-deploy-token/versions/latest
     env: '_FIREBASE_TOKEN'
 timeout: '1600s'
 options:
